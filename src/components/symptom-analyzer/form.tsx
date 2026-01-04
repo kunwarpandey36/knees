@@ -21,6 +21,7 @@ function SubmitButton() {
 
 type SymptomAnalyzerFormProps = {
   formAction: (payload: FormData) => void;
+  initialState?: any
 };
 
 export function SymptomAnalyzerForm({ formAction }: SymptomAnalyzerFormProps) {

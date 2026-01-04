@@ -1,6 +1,6 @@
 'use client';
 
-import { useFormState } from 'react-dom';
+import { useActionState } from 'react';
 import { type FormState } from '@/app/symptom-analyzer/actions';
 import { SymptomAnalyzerForm } from '@/components/symptom-analyzer/form';
 import { AnalysisResults } from '@/components/symptom-analyzer/results';
@@ -22,7 +22,7 @@ type SymptomAnalyzerClientProps = {
 export function SymptomAnalyzerClient({
   getAnalysis,
 }: SymptomAnalyzerClientProps) {
-  const [state, formAction] = useFormState(getAnalysis, initialState);
+  const [state, formAction] = useActionState(getAnalysis, initialState);
 
   return (
     <div className="space-y-8">
