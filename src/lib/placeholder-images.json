@@ -1,3 +1,82 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "A comforting image showing caring hands holding an older person's hands.",
+      "imageUrl": "https://images.unsplash.com/photo-1601261763690-4949dd16e558?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJpbmclMjBoYW5kc3xlbnwwfHx8fDE3Njc1NDUwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "caring hands"
+    },
+    {
+      "id": "exercise-knee-flexion",
+      "description": "A person gently performing a seated knee flexion exercise.",
+      "imageUrl": "https://images.unsplash.com/photo-1763949391155-33111ea76d76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxrbmVlJTIwZXhlcmNpc2V8ZW58MHx8fHwxNzY3NTQ1MDE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "knee exercise"
+    },
+    {
+      "id": "exercise-leg-lifts",
+      "description": "A person performing a seated leg lift.",
+      "imageUrl": "https://images.unsplash.com/photo-1467818488384-3a21f2b79959?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsZWclMjBsaWZ0fGVufDB8fHx8MTc2NzU0NTAxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leg lift"
+    },
+    {
+      "id": "exercise-wall-squat",
+      "description": "A person doing a gentle wall squat.",
+      "imageUrl": "https://images.unsplash.com/photo-1720697444461-6ff0f2d2efd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3YWxsJTIwc3F1YXR8ZW58MHx8fHwxNzY3NTQ1MDE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wall squat"
+    },
+    {
+      "id": "diet-turmeric",
+      "description": "A bowl of golden turmeric powder with fresh turmeric root.",
+      "imageUrl": "https://images.unsplash.com/photo-1600728257188-480e132c1610?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0dXJtZXJpYyUyMHNwaWNlfGVufDB8fHx8MTc2NzU0NTAxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "turmeric spice"
+    },
+    {
+      "id": "diet-leafy-greens",
+      "description": "A basket of fresh leafy greens like spinach.",
+      "imageUrl": "https://images.unsplash.com/photo-1529313780224-1a12b68bed16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGVhZnklMjBncmVlbnN8ZW58MHx8fHwxNzY3NTQ1MDE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leafy greens"
+    },
+    {
+      "id": "diet-lentils",
+      "description": "Various types of lentils and legumes in bowls.",
+      "imageUrl": "https://images.unsplash.com/photo-1587041770006-965fc1251180?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsZW50aWxzJTIwZGFsfGVufDB8fHx8MTc2NzU0NTAxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lentils dal"
+    },
+    {
+      "id": "diet-fish",
+      "description": "A piece of cooked salmon with herbs.",
+      "imageUrl": "https://images.unsplash.com/photo-1716816211582-ef70b1cd2e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb29rZWQlMjBmaXNofGVufDB8fHx8MTc2NzQ3MjI4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cooked fish"
+    },
+    {
+      "id": "diet-chicken-soup",
+      "description": "A warm bowl of chicken soup.",
+      "imageUrl": "https://images.unsplash.com/photo-1574885198468-488944bf9b89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGlja2VuJTIwc291cHxlbnwwfHx8fDE3Njc1NDUwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chicken soup"
+    },
+    {
+      "id": "diet-eggs",
+      "description": "A couple of boiled eggs.",
+      "imageUrl": "https://images.unsplash.com/photo-1606636661147-51df1c246ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxib2lsZWQlMjBlZ2dzfGVufDB8fHx8MTc2NzU0NTAxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "boiled eggs"
+    },
+    {
+      "id": "remedy-ginger-tea",
+      "description": "A cup of hot ginger tea.",
+      "imageUrl": "https://images.unsplash.com/photo-1682530016867-6fcc63df0cfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnaW5nZXIlMjB0ZWF8ZW58MHx8fHwxNzY3NTQ1MDE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ginger tea"
+    },
+    {
+      "id": "remedy-hot-compress",
+      "description": "A hot water bag used as a compress.",
+      "imageUrl": "https://images.unsplash.com/photo-1626880494339-5a5d5ec8f17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob3QlMjBjb21wcmVzc3xlbnwwfHx8fDE3Njc1NDUwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hot compress"
+    },
+    {
+      "id": "remedy-oil-massage",
+      "description": "Hands massaging knee with oil.",
+      "imageUrl": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvaWwlMjBtYXNzYWdlfGVufDB8fHx8MTc2NzU0NTAxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "oil massage"
+    }
+  ]
 }
