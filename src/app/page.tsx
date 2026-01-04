@@ -64,148 +64,6 @@ const exercises = [
   },
 ];
 
-const correctiveExercises = [
-  {
-    title: 'Corrective Exercises for Knock Knees (Genu Valgum)',
-    description:
-      'These non-surgical exercises focus on strengthening weak muscles and stretching tight ones to improve knee alignment and reduce pain associated with knock knees.',
-    sections: [
-      {
-        title: 'Strengthen Hip Abductors',
-        subtitle: 'Goal: Pull thighs outward to reduce medial knee stress.',
-        exercises: [
-          {
-            name: 'Side-Lying Leg Raises',
-            steps: [
-              'Lie on your side, raise top leg 30-45°. Hold 2-3 sec, lower slowly.',
-              '3 sets of 15 reps each leg, 5 times a week.',
-            ],
-          },
-          {
-            name: 'Standing Hip Abduction (with Resistance Band)',
-            steps: [
-              'Place a band around your ankles and stand tall.',
-              'Move one leg outward against the band, hold for 2 seconds, and return.',
-              '2-3 sets of 10-15 reps each side.',
-            ],
-          },
-          {
-            name: 'Clamshells',
-            steps: [
-              'Lie on your side with knees bent and feet together.',
-              'Lift your top knee like opening a clamshell, keeping feet together. Add a resistance band around thighs for more challenge.',
-              '3 sets of 15 reps.',
-            ],
-          },
-          {
-            name: 'Lateral Band Walks',
-            steps: [
-              'Place a band around ankles or thighs.',
-              'Get into a slight squat and step sideways for 10-15 steps, then return.',
-              '2 sets in each direction.',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Strengthen Hip External Rotators',
-        subtitle: 'Goal: Control thigh rotation to prevent inward knee collapse.',
-        exercises: [
-          {
-            name: 'Seated External Rotation (with Resistance Band)',
-            steps: [
-              'Sit upright with a band around your ankles.',
-              'Keeping your knee stable, rotate one foot outward from the hip.',
-              '3 sets of 10-12 reps each side.',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Stretch Tight Adductors (Inner Thigh)',
-        subtitle: 'Goal: Reduce the inward pull on the thighs.',
-        exercises: [
-          {
-            name: 'Butterfly Stretch',
-            steps: [
-              'Sit with the soles of your feet together.',
-              'Gently press your knees toward the floor. Hold for 30 seconds.',
-              'Repeat 3 times, daily.',
-            ],
-          },
-          {
-            name: 'Side Lunges',
-            steps: [
-              'Step out to one side, keeping the other leg straight, feeling a stretch in the inner thigh.',
-              'Perform 10 slow, controlled reps per leg.',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Stretch Iliotibial (IT) Band',
-        subtitle: 'Goal: Reduce lateral tension on the knee.',
-        exercises: [
-          {
-            name: 'Standing ITB Stretch',
-            steps: [
-              'Cross one leg behind the other.',
-              'Lean your hip out to the side of the back leg until you feel a stretch.',
-              'Hold for 30 seconds, repeat 3 times per side.',
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Corrective Exercises for Bowlegs (Genu Varum)',
-    description: 'These exercises aim to strengthen muscles that help align the knee and stretch those that pull it outward.',
-    sections: [
-      {
-        title: 'Strengthen Hip Adductors and Quadriceps',
-        subtitle: 'Goal: Pull knees inward and stabilize the joint.',
-        exercises: [
-          {
-            name: 'Ball Squeezes',
-            steps: [
-              'Sit or lie down with a soft ball between your knees.',
-              'Squeeze the ball for 5 seconds, then relax. Repeat 15 times.',
-            ],
-          },
-          {
-            name: 'Inner Thigh Leg Lifts',
-            steps: [
-              'Lie on your side, top leg bent over the bottom straight leg.',
-              'Lift the bottom leg up. Repeat 15 times per side.',
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Corrective Exercises for Patellar Maltracking',
-    description: 'These exercises help stabilize the kneecap and ensure it glides smoothly.',
-    sections: [
-      {
-        title: 'Strengthen Quadriceps (VMO)',
-        subtitle: 'Goal: Strengthen the inner part of your quad to help guide the kneecap.',
-        exercises: [
-          {
-            name: 'Straight Leg Raises',
-            steps: [
-              'Lie on your back, one knee bent. Keep the other leg straight.',
-              'Tighten your thigh muscle and lift the straight leg about a foot off the floor. Hold for 5 seconds.',
-              'Repeat 15 times per leg.',
-            ],
-          },
-        ],
-      },
-    ],
-  },
-];
-
 // Data from dietary-recommendations/page.tsx
 const vegFoods = [
   {
@@ -349,35 +207,6 @@ const threads = [
   },
 ];
 
-async function AiSummary() {
-  let summary = 'Could not generate summary.';
-  try {
-    const summaryResult = await homeRemedyEffectivenessSummary({
-      remedyName: 'Ginger & Turmeric Tea',
-      userReviews: [
-        'This tea really helps in the mornings with my stiff knees.',
-        'A comforting drink, especially in winter. My pain feels a bit less.',
-      ],
-      userRatings: [4, 4],
-    });
-    if (summaryResult.summary) {
-      summary = summaryResult.summary;
-    }
-  } catch (e) {
-    console.log('Could not generate summary. Is the GEMINI_API_KEY environment variable set?');
-  }
-
-  return (
-    <div className="bg-amber-100/60 p-6 rounded-lg border border-amber-200/80 my-8">
-      <h4 className="font-headline text-lg text-amber-900 mb-2 flex items-center gap-2">
-        <Sparkles className="w-5 h-5 text-amber-700" />
-        AI-Powered Summary
-      </h4>
-      <p className="text-amber-800/80">{summary}</p>
-    </div>
-  );
-}
-
 function getTimeAgo(dateString: string) {
   const date = new Date(dateString);
   const now = new Date();
@@ -498,36 +327,28 @@ export default function Home() {
               <span className="text-primary font-semibold">Always consult a doctor or physiotherapist before starting a new exercise program.</span>
             </p>
           </div>
-          <Card className="p-4 md:p-6 shadow-lg">
-            <Accordion type="single" collapsible className="w-full">
-              {correctiveExercises.map((exercise, index) => (
-                <AccordionItem value={`corrective-item-${index}`} key={exercise.title}>
-                  <AccordionTrigger className="text-xl font-headline hover:no-underline text-left">{exercise.title}</AccordionTrigger>
-                  <AccordionContent className="pt-4 space-y-6">
-                    <p className="text-muted-foreground">{exercise.description}</p>
-                    {exercise.sections.map(section => (
-                      <div key={section.title} className="space-y-4">
-                        <h4 className="font-bold font-headline text-lg text-primary">{section.title}</h4>
-                        <p className="text-sm text-muted-foreground italic">{section.subtitle}</p>
-                        <ul className="space-y-3 list-disc list-outside pl-5">
-                          {section.exercises.map(ex => (
-                            <li key={ex.name}>
-                              <span className="font-semibold">{ex.name}:</span>
-                              <ol className="list-decimal list-inside pl-4 text-muted-foreground">
-                                {ex.steps.map((step, i) => (
-                                  <li key={i}>{step}</li>
-                                ))}
-                              </ol>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Link href="/bow-legs">
+              <Card className="h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="font-headline text-primary">Bow Legs (Genu Varum)</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Learn non-surgical exercises and lifestyle changes to manage bow legs and reduce knee strain.</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/knock-knees">
+              <Card className="h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="font-headline text-primary">Knock Knees (Genu Valgum)</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Discover how to strengthen hip muscles and stretch tight areas to correct knock-knee alignment.</p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
         </section>
 
         {/* Dietary Recommendations Section */}
@@ -623,7 +444,6 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-              <AiSummary />
             </div>
           </div>
         </section>
@@ -720,5 +540,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
