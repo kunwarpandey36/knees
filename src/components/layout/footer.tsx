@@ -11,14 +11,6 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Saheli Knee Care. All rights reserved.
           </p>
         </div>
-        <nav className="flex items-center gap-4 text-sm">
-          <Link href="#" className="text-muted-foreground hover:text-foreground">
-            Privacy Policy
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:text-foreground">
-            Terms of Service
-          </Link>
-        </nav>
       </div>
     </footer>
   );
