@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import {
-  HeartPulse,
   Apple,
   Dumbbell,
   Sparkles,
@@ -13,17 +12,14 @@ import {
   Star,
   Wand2,
   MessageCircle,
-  MapPin,
-  MessageSquare,
-  Clock,
   Phone,
 } from 'lucide-react';
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -42,9 +38,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Input } from '@/components/ui/input';
-import { SymptomAnalyzerClient } from '@/components/symptom-analyzer/symptom-analyzer-client';
-import { getAnalysis } from '@/app/symptom-analyzer/actions';
 import { homeRemedyEffectivenessSummary } from '@/ai/flows/home-remedy-effectiveness-summary';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -1012,35 +1005,13 @@ export default function Home() {
 
         <Separator className="my-12 md:my-16 w-full max-w-4xl" />
 
-        {/* Symptom Analyzer Section */}
-        <section
-          id="symptom-analyzer"
-          className="w-full py-12 md:py-24 bg-card rounded-lg max-w-4xl"
-        >
-          <div className="container mx-auto max-w-4xl px-4">
-            <div className="text-center mb-12">
-              <HeartPulse className="mx-auto h-12 w-12 text-primary mb-4" />
-              <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl">
-                5. AI Symptom Analyzer
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Describe your knee pain, diet, and lifestyle, and our AI will
-                provide personalized insights and suggestions tailored for you.
-              </p>
-            </div>
-            <SymptomAnalyzerClient getAnalysis={getAnalysis} />
-          </div>
-        </section>
-
-        <Separator className="my-12 md:my-16 w-full max-w-4xl" />
-
         {/* Home Remedies Section */}
         <section id="remedies" className="w-full py-12 md:py-24 max-w-5xl">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Sparkles className="mx-auto h-12 w-12 text-primary mb-4" />
               <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl">
-                6. Supportive Home Remedies
+                5. Supportive Home Remedies
               </h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                 Explore time-tested Indian home remedies for temporary relief,
@@ -1070,7 +1041,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <Stethoscope className="mx-auto h-12 w-12 text-primary mb-4" />
               <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl">
-                7. Find a Specialist
+                6. Find a Specialist
               </h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                 Connect with an experienced specialist.
@@ -1107,7 +1078,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <Users className="mx-auto h-12 w-12 text-primary mb-4" />
               <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl">
-                8. Community Forum
+                7. Community Forum
               </h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                 Share experiences, ask questions, and support each other. You
