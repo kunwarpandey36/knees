@@ -17,7 +17,7 @@ export default function KnockKneesPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-center">
             <p>Strengthening the hip outer rotators and abductors helps “pull” knock knees back to neutral. Key exercises include:</p>
-            <ul className="list-disc list-outside space-y-3 pl-5 text-left md:text-center">
+            <ul className="list-disc list-inside space-y-3">
               <li><span className="font-semibold text-primary">Clamshells (Hip Abductors):</span> Lie on your side with knees bent. Keep feet together and lift the top knee. Do 3 sets of 10–15 reps per side.</li>
               <li><span className="font-semibold text-primary">Side-Lying Leg Raises:</span> Lie on your side with legs straight. Lift the top leg to strengthen glutes and hip stabilizers.</li>
               <li><span className="font-semibold text-primary">Glute Bridges:</span> Lie on your back with knees bent and lift your hips by squeezing your glutes.</li>
@@ -34,7 +34,7 @@ export default function KnockKneesPage() {
             <CardTitle className="font-headline text-2xl text-center">2. Posture & Activity Modifications</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-center">
-            <ul className="list-disc list-outside space-y-3 pl-5 text-left md:text-center">
+            <ul className="list-disc list-inside space-y-3">
               <li><span className="font-semibold text-primary">Walking/Standing:</span> Keep feet straight and avoid letting knees knock inward. Use shoes with arch support.</li>
               <li><span className="font-semibold text-primary">Knee Alignment:</span> In movements like squats, keep knees over the feet, pointing in the same direction as your toes.</li>
               <li><span className="font-semibold text-primary">Squatting/Lifting:</span> Avoid deep bending with knees pinching inward. Use a support bar if needed.</li>
@@ -50,7 +50,7 @@ export default function KnockKneesPage() {
           <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
             <div className="space-y-2">
               <h4 className="font-semibold text-green-600">Do</h4>
-              <ul className="list-disc list-outside space-y-2 pl-5 text-left md:text-center">
+              <ul className="list-disc list-inside space-y-2">
                 <li>Strengthen your hip and thigh muscles.</li>
                 <li>Sit and stand with good posture.</li>
                 <li>Maintain a healthy weight.</li>
@@ -58,7 +58,7 @@ export default function KnockKneesPage() {
             </div>
             <div className="space-y-2">
               <h4 className="font-semibold text-red-600">Don’t</h4>
-              <ul className="list-disc list-outside space-y-2 pl-5 text-left md:text-center">
+              <ul className="list-disc list-inside space-y-2">
                 <li>Wear unsupportive shoes like flip-flops.</li>
                 <li>Perform deep yoga poses if they cause knees to collapse inward.</li>
                 <li>Participate in high-impact sports without caution.</li>
@@ -81,7 +81,7 @@ export default function KnockKneesPage() {
             <CardTitle className="font-headline text-2xl text-center">5. Supports (Braces, Insoles)</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-center">
-            <ul className="list-disc list-outside space-y-3 pl-5 text-left md:text-center">
+            <ul className="list-disc list-inside space-y-3">
               <li><span className="font-semibold text-primary">Orthotic Insoles:</span> Can correct excessive foot pronation that worsens knock knees.</li>
               <li><span className="font-semibold text-primary">Valgus Knee Braces:</span> Can shift pressure away from the over-stressed outer knee.</li>
               <li><span className="font-semibold text-primary">Knee Straps/Wraps:</span> For comfort during exercise; they do not change alignment.</li>
@@ -94,7 +94,7 @@ export default function KnockKneesPage() {
             <CardTitle className="font-headline text-2xl text-center">6. Indian Lifestyle Guidance</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-center">
-            <ul className="list-disc list-outside space-y-3 pl-5 text-left md:text-center">
+            <ul className="list-disc list-inside space-y-3">
               <li><span className="font-semibold text-primary">Floor Sitting:</span> Avoid full lotus or prolonged cross-legged positions.</li>
               <li><span className="font-semibold text-primary">Yoga Modifications:</span> Pay extra attention to knee alignment and use props.</li>
               <li><span className="font-semibold text-primary">Daily Routines:</span> Use support rails for squatting. Push evenly through both legs when rising.</li>
