@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import {
   Apple,
@@ -24,6 +26,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Input } from '@/components/ui/input';
 import { homeRemedyEffectivenessSummary } from '@/ai/flows/home-remedy-effectiveness-summary';
 import Link from 'next/link';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import React, { useState } from 'react';
 
 // Data from exercise-guides/page.tsx
 const exercises = [
@@ -168,45 +174,6 @@ const doctors = [
   },
 ];
 
-// Data from community-forum/page.tsx
-const threads = [
-  {
-    topic: 'hello check',
-    author: 'Admin',
-    tag: 'General',
-    replies: 0,
-    lastPost: '2024-07-29T23:16:00Z',
-  },
-  {
-    topic: 'Best oils for knee massage?',
-    author: 'Sunita J.',
-    tag: 'Remedies',
-    replies: 5,
-    lastPost: '2024-07-30T10:00:00Z',
-  },
-  {
-    topic: 'Struggling with morning stiffness. Any tips?',
-    author: 'Priya M.',
-    tag: 'Lifestyle',
-    replies: 12,
-    lastPost: '2024-07-30T04:00:00Z',
-  },
-  {
-    topic: 'My experience with wall squats',
-    author: 'Aarti V.',
-    tag: 'Exercises',
-    replies: 8,
-    lastPost: '2024-07-29T12:00:00Z',
-  },
-  {
-    topic: 'Good vegetarian sources for calcium?',
-    author: 'Kavita R.',
-    tag: 'Diet',
-    replies: 15,
-    lastPost: '2024-07-28T18:00:00Z',
-  },
-];
-
 function getTimeAgo(dateString: string) {
   const date = new Date(dateString);
   const now = new Date();
@@ -235,7 +202,41 @@ function getTimeAgo(dateString: string) {
   return Math.floor(seconds) + ' seconds ago';
 }
 
+type Thread = {
+  topic: string;
+  author: string;
+  tag: string;
+  replies: number;
+  lastPost: string;
+};
+
+
 export default function Home() {
+  const [threads, setThreads] = useState<Thread[]>([
+    {
+      topic: 'hello check',
+      author: 'Admin',
+      tag: 'General',
+      replies: 0,
+      lastPost: '2024-07-29T23:16:00Z',
+    },
+  ]);
+  const [isDialogOpen, setDialogOpen] = useState(false);
+  const [newThread, setNewThread] = useState({ topic: '', author: '', tag: 'General' });
+
+  const handleAddThread = () => {
+    if (newThread.topic && newThread.author) {
+      const newThreadWithDate = {
+        ...newThread,
+        replies: 0,
+        lastPost: new Date().toISOString(),
+      };
+      setThreads([newThreadWithDate, ...threads]);
+      setNewThread({ topic: '', author: '', tag: 'General' });
+      setDialogOpen(false);
+    }
+  };
+  
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
@@ -498,7 +499,54 @@ export default function Home() {
                 <CardTitle className="font-headline">Active Discussions</CardTitle>
                 <CardDescription>Join the conversation or start your own.</CardDescription>
               </div>
-              <Button>Start a New Discussion</Button>
+              <Dialog open={isDialogOpen} onOpenChange={setDialogOpen}>
+                <DialogTrigger asChild>
+                  <Button>Start a New Discussion</Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Start a New Discussion</DialogTitle>
+                  </DialogHeader>
+                  <div className="grid gap-4 py-4">
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="author" className="text-right">
+                        Name
+                      </Label>
+                      <Input
+                        id="author"
+                        value={newThread.author}
+                        onChange={(e) => setNewThread({ ...newThread, author: e.target.value })}
+                        className="col-span-3"
+                      />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="topic" className="text-right">
+                        Topic
+                      </Label>
+                      <Textarea
+                        id="topic"
+                        value={newThread.topic}
+                        onChange={(e) => setNewThread({ ...newThread, topic: e.target.value })}
+                        className="col-span-3"
+                      />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="tag" className="text-right">
+                        Tag
+                      </Label>
+                      <Input
+                        id="tag"
+                        value={newThread.tag}
+                        onChange={(e) => setNewThread({ ...newThread, tag: e.target.value })}
+                        className="col-span-3"
+                      />
+                    </div>
+                  </div>
+                  <DialogFooter>
+                    <Button onClick={handleAddThread}>Post Discussion</Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </CardHeader>
             <CardContent>
               <Table>
